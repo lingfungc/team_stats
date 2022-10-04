@@ -12,11 +12,21 @@ const team = {
   },
   get games() {
     return this._games;
+  },
+  addPlayer(newfirstName, newlastName, newAge) {
+    let player = {
+      firstName: newfirstName,
+      lastName: newlastName,
+      age: newAge
+    };
+    this.players.push(player);
   }
 };
 
-console.log(team._players);
-console.log(team._games);
+// console.log(team._players);
+// console.log(team._games);
+
+team.addPlayer('Justin', 'Chan', 27);
 
 console.log(team.players);
 console.log(team.games);
