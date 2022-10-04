@@ -20,6 +20,14 @@ const team = {
       age: newAge
     };
     this.players.push(player);
+  },
+  addGame(newOpponent, newTeamPoints, newOpponentPoints) {
+    let game = {
+      opponent: newOpponent,
+      teamPoints: newTeamPoints,
+      opponentPoints: newOpponentPoints
+    };
+    this.games.push(game);
   }
 };
 
@@ -27,6 +35,7 @@ const team = {
 // console.log(team._games);
 
 team.addPlayer('Justin', 'Chan', 27);
+team.addGame('Chelsea', 1, 0);
 
 console.log(team.players);
 console.log(team.games);
